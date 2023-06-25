@@ -102,8 +102,10 @@ find $PHP_PATCHES -name "*.patch" -exec sh -c 'echo "[PATCH] Applying source pat
 # Configuration args for current php version ($PHP_CONF var)
 source "$PHP_CONF"
 
-RANLIB=$RANLIB CFLAGS="$CFLAGS $FLAGS_LTO" CXXFLAGS="$CXXFLAGS $FLAGS_LTO" LDFLAGS="$LDFLAGS $FLAGS_LTO" ./configure $PHP_OPTIMIZATION $PHP_CONF_ARGS
+RANLIB=$RANLIB CFLAGS="$CFLAGS $FLAGS_LTO" CXXFLAGS="$CXXFLAGS $FLAGS_LTO" LDFLAGS="$LDFLAGS $FLAGS_LTO" ./configure $PHP_OPTIMIZATION $PHP_CONF_ARGS \
 $CONFIGURE_FLAGS >> $INSTALL_LOG 2>&1
+
+# FIXME: Recheck output log funcs..
 
 write_compile
 if [ "$COMPILE_FOR_ANDROID" == "yes" ]; then
