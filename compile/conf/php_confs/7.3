@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+source $PHP_CONF_DEF
+
+PHP_CONF_ARGS=\
+"\
+$PHP_CONF_DEF_ARGS \
+--enable-maintainer-zts \
+--enable-bcmath \
+--enable-opcache=$HAVE_OPCACHE \
+--with-pcre-jit \
+--enable-zip \
+--enable-recursionguard \
+--enable-xxhash \
+"
+

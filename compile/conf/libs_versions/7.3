@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+ZLIB_VERSION="1.2.13"
+LIBDEFLATE_VERSION="353a2e2fc29f7bba17b2d7601355446d107a58f9" # Newer from last the comment at the current time
+# LIBDEFLATE_VERSION="495fee110ebb48a5eb63b75fd67e42b2955871e2" #1.18  # turned off for a while.. & use version tag for now..
+GMP_VERSION="6.2.1"  # won't compile with new libtool with llvm..
+# GMP_VERSION="6.2.0"
+CURL_VERSION="curl-8_1_2"
+YAML_VERSION="0.2.5"
+LEVELDB_VERSION="1c7564468b41610da4f498430e795ca4de0931ff"
+LIBXML_VERSION="2.10.1" #2.10.2 requires automake 1.16.3, which isn't easily available on Ubuntu 20.04
+LIBPNG_VERSION="1.6.39"
+LIBJPEG_VERSION="9e"
+OPENSSL_VERSION="1.1.1u"
+# LIBZIP_VERSION="1.9.2"  # included in php v7.3.22
+SQLITE3_YEAR="2023"
+SQLITE3_VERSION="3420000" #3.42.0
+# mb LIBDEFLATE_VERSION and EXT_LIBDEFLATE_VERSION have incompatible versions (with current php 7.3.23 too..)
+
+# EXT_PMMPTHREAD_VERSION="6.0.2"  # Only if -P5 (will build for PM api version 5) (Just use newer pmmpthread)10092020
+EXT_PMMPTHREAD_VERSION="6716c084a35b0908c648534e8e009af94040c914"  # Last commit before drop php v7.3 support (near 3.2.0 but newer because original pthreads is archived)
+# EXT_PTHREADS_VERSION="3.2.0"  # too old & buggy..
+# EXT_PTHREADS_VERSION="ede7d5b0c59f924cdecee9f420321c362a766809"  # older from someone old script.. & too buggy..
+READLINE_VERSION="6.3"
+# NCURSES_VERSION="6.0"  # don't need
+# EXT_NCURSES_VERSION="1.0.2"  # don't need
+EXT_YAML_VERSION="2.2.3"
+EXT_LEVELDB_VERSION="317fdcd8415e1566fc2835ce2bdb8e19b890f9f3"
+EXT_POCKETMINE_CHUNKUTILS_VERSION="master"
+# EXT_CHUNKUTILS2_VERSION="318b63b48f6b557f34795eabcebced2bf767a1f0"
+# EXT_CHUNKUTILS2_VERSION="88ac650a9dee56386606f95d8905e020aa61c40e"
+EXT_XDEBUG_VERSION="2.7.2"
+# EXT_XDEBUG_VERSION="3.2.1"
+EXT_IGBINARY_VERSION="3.2.14"
+
+EXT_DS_VERSION="2ddef84d3e9391c37599cb716592184315e23921"
+
+EXT_CRYPTO_VERSION="0.3.2"
+EXT_RECURSIONGUARD_VERSION="0.1.0"
+# EXT_LIBDEFLATE_VERSION="0.2.1"  # turned off for a while.. (because incompatible with some old versions..)
+EXT_MORTON_VERSION="0.1.2"
+EXT_XXHASH_VERSION="0.2.0"
+EXT_ARRAYDEBUG_VERSION="0.1.0"
+

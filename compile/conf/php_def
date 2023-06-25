@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Why iconv is off? & do we need freetype for gd? (fonts proc)
+
+# configure: WARNING: unrecognized options: --with-zip in 7.4|--enable-zip, --with-libxml, --enable-zts, --enable-opcache-jit
+# For new php: --enable-opcache-jit=$HAVE_OPCACHE_JIT
+# --enable-arraydebug \
+# --enable-chunkutils2 \
+# --with-libdeflate \
+
+# mb use `--with-gnu-ld=no`
+# FIXME: Move args to other place.. & do need `--enable-embed` arg..?
+
+PHP_CONF_DEF_ARGS=\
+"\
+--prefix="$INSTALL_DIR" \
+--exec-prefix="$INSTALL_DIR" \
+--enable-shared=$DO_SHARED \
+--enable-static=$DO_STATIC \
+--enable-cli \
+--enable-ftp \
+--with-crypto \
+--with-curl \
+--with-zlib \
+--with-libdeflate \
+--with-yaml \
+--with-openssl \
+$HAS_LIBJPEG \
+$HAS_LIBPNG \
+$HAS_GD \
+$HAVE_READLINE \
+$EXTENSIONS \
+--with-leveldb="$INSTALL_DIR" \
+--enable-morton \
+--enable-mbstring \
+--disable-mbregex \
+--enable-calendar \
+$HAVE_PCNTL \
+$THREAD_EXT_FLAGS \
+$CHUNKUTILS_EXT_FLAG \
+--enable-fileinfo \
+--with-libxml-dir="$INSTALL_DIR" \
+--enable-xml \
+--enable-dom \
+--enable-simplexml \
+--enable-xmlreader \
+--enable-xmlwriter \
+--disable-cgi \
+--disable-phpdbg \
+--disable-session \
+--disable-short-tags \
+--without-pear \
+--without-iconv \
+$HAVE_MYSQLI \
+--with-pdo-sqlite \
+--with-pdo-mysql \
+--with-pic \
+--enable-phar \
+--enable-ctype \
+--enable-sockets \
+--enable-shmop \
+--enable-embed \
+$HAS_DEBUG \
+"
+

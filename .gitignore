@@ -1,7 +1,15 @@
 bin/
+bin_skylake/
 install_data/
 install.log
+install*.log
 temp_data/
+comp*.patch
+compile.sh.*
+compile_gcc.sh
 compile.log
+tmp/
+php73_chelp.txt
+.test.c.o
 /*.zip
 /*.exe
