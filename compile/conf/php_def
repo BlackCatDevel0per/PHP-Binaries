@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Why iconv is off? & do we need freetype for gd? (fonts proc)
 
-# configure: WARNING: unrecognized options: --with-zip in 7.4|--enable-zip, --with-libxml, --enable-zts, --enable-opcache-jit
+# configure: WARNING: --with-libxml, --enable-zts, --enable-opcache-jit
 # For new php: --enable-opcache-jit=$HAVE_OPCACHE_JIT
 # --enable-arraydebug \
 # --enable-chunkutils2 \

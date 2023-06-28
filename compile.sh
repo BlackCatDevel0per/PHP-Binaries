@@ -2,7 +2,7 @@
 
 # FIXME: Update some libs! For examples first look at aur php73/74 package
 [ -z "$PHP_VERSION" ] && PHP_VERSION="7.3.33"
-# [ -z "$PHP_VERSION" ] && PHP_VERSION="7.3.23"
+# [ -z "$PHP_VERSION" ] && PHP_VERSION="7.4.33"
 
 PHP_MAJOR_VERSION=$(echo $PHP_VERSION | cut -d. -f-2)
 PHP_PATCH_VERSION=$(echo $PHP_VERSION | cut -d '.' -f 3)
