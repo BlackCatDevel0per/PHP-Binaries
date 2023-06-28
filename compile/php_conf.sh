@@ -24,10 +24,10 @@ fi
 
 if [ "$DO_STATIC" == "yes" ]; then
 	# EXTENSIONS="$EXTENSIONS --enable-zip=static"
-	EXTENSIONS="$EXTENSIONS --with-gmp=static"
+	EXTENSIONS="$EXTENSIONS --with-gmp"
 else
 	# EXTENSIONS="$EXTENSIONS --enable-zip=shared"
-	EXTENSIONS="$EXTENSIONS --with-gmp=shared"
+	EXTENSIONS="$EXTENSIONS --with-gmp"
 fi
 
 #hack for curl with pkg-config (ext/curl doesn't give --static to pkg-config on static builds)
@@ -94,6 +94,7 @@ sed -i 's/PKG_CHECK_MODULES(LIBDEFLATE, libdeflate)/# &/' configure
 
 # Apply some patches from aur (phpXX - XX is major version)
 find $PHP_PATCHES -name "*.patch" -exec sh -c 'echo "[PATCH] Applying source patch {}"; patch -p1 -i "{}"' \;
+write_done 2
 # for patch_file in $(ls -1 $PHP_PATCHES/*.patch); do
 #     echo "[PATCH] Applying source patch $patch_file"
 #     patch -p1 -i "$patch_file"
